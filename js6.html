@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>    
+<meta charset="utf-8">
+<title>JS6</title>
+</head>
+
+<body>
+
+    <h1>JS6</h1>
+
+    <div id="answer"></div>
+
+    <script>
+        function count(numbers, value) {
+            let result = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] < value) {
+                    result += 1;
+                }
+            }
+            return result;
+        }
+
+        function testCount() {
+            let numbers = [3, 55, 30, 28, 9, 12];
+            let value = 10;
+
+            let countResult = count(numbers, value);
+
+            document.getElementById("answer").innerHTML = "The count of the numbers less than " + value + " is: " + countResult;
+        }
+
+        testCount();
+
+    </script>
+
+
+
+</body>
+</html>
